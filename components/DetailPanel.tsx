@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Emperor } from '../types';
 import { getHistoricalInsight } from '../services/gemini';
 import { BookOpen, Sparkles, X, ScrollText, Scale } from 'lucide-react';
@@ -8,7 +8,7 @@ interface DetailPanelProps {
   onClose: () => void;
 }
 
-const DetailPanel: React.FC<DetailPanelProps> = ({ emperor, onClose }) => {
+const DetailPanel = ({ emperor, onClose }: DetailPanelProps) => {
   const [aiResponse, setAiResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'bio' | 'ai'>('bio');

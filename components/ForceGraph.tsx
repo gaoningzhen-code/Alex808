@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { GraphData, Emperor } from '../types';
 
@@ -8,7 +8,7 @@ interface ForceGraphProps {
   selectedNodeId: string | null;
 }
 
-const ForceGraph: React.FC<ForceGraphProps> = ({ data, onNodeClick, selectedNodeId }) => {
+const ForceGraph = ({ data, onNodeClick, selectedNodeId }: ForceGraphProps) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
