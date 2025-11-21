@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 
 // Initialize the Gemini API client
 // Note: process.env.API_KEY is assumed to be injected by the environment
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getHistoricalInsight = async (emperorName: string, eraName: string, queryType: 'secret' | 'summary' | 'impact') => {
   if (!process.env.API_KEY) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { qingData } from './services/data';
 import ForceGraph from './components/ForceGraph';
 import DetailPanel from './components/DetailPanel';
