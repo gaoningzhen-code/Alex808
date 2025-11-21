@@ -1,9 +1,9 @@
-// Removed invalid reference to vite/client
-// Explicitly declare process.env for API_KEY usage in the application
+export {};
 
-declare var process: {
-  env: {
-    API_KEY: string;
-    [key: string]: any;
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      API_KEY: string | undefined;
+    }
   }
-};
+}
